@@ -1,0 +1,21 @@
+package nowcode;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class BC43 {
+    public static void main(String[] args)throws IOException{
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        int score = 0;
+        String str = null;
+        while ((str = input.readLine())!= null){
+            score = Integer.parseInt(str);
+            if (score >= 60 && score <=100)
+                System.out.println("Pass");
+            else
+                System.out.println("Fail");
+        }
+    }
+}
+
