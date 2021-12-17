@@ -25,13 +25,13 @@ public class _692_hotlightWords {
             cnt.put(word, cnt.getOrDefault(word, 0) + 1);
         }
         List<String> rec = new ArrayList<String>();
-        for (Map.Entry<String,Integer> entry : cnt.entrySet()){
+        for (Map.Entry<String, Integer> entry : cnt.entrySet()){
             rec.add(entry.getKey());
         }
         Collections.sort(rec, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                return cnt.get(o1) == cnt.get(o2)? o1.compareTo(o2) : cnt.get(o2);
+                return cnt.get(o1) == cnt.get(o2)? o1.compareTo(o2) : cnt.get(o2) - cnt.get(o1);
             }
 
         });
